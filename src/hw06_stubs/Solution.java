@@ -1,12 +1,10 @@
-package hw06_stubs;
-
 import java.util.ArrayList;
 
 public class Solution {
 
-	private String target;
-	private ArrayList<Character> partialSolution;
-	private int missingChars;
+	protected String target;
+	protected ArrayList<Character> partialSolution;
+	protected int missingChars;
 
 	public Solution() {
 		this("");
@@ -16,6 +14,7 @@ public class Solution {
 		this.target = target;
 		missingChars = target.length();
 		partialSolution = new ArrayList<>(missingChars);
+
 		for (int i = 0; i < target.length(); i++) {
 			partialSolution.add('_');
 		}
@@ -34,6 +33,7 @@ public class Solution {
 
 	public boolean addGuess(char guess) {
 		boolean guessCorrect = false;
+
 		for (int i = 0; i < target.length(); i++) {
 			if (target.charAt(i) == guess) {
 				partialSolution.set(i, guess);
