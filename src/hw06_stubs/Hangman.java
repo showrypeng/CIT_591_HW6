@@ -6,7 +6,6 @@ import java.util.Random;
 import java.util.Scanner;
 import java.util.TreeSet;
 
-
 public class Hangman {
 
 	protected ArrayList<String> wordList;
